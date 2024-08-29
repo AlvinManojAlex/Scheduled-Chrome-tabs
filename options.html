@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .url-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Scheduled Chrome Tab Settings</h1>
+    <input id='url' placeholder="Enter URL" type="text">
+    <input id='time' placeholder="Time (HH:MM)" type="time">
+    <button id="add">Add URL</button>
+
+    <h2>Saved URLs</h2>
+    <div id="url-list"></div>
+
+    <script src="options.js"></script>
+</body>
+</html>
