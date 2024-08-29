@@ -13,9 +13,9 @@ chrome.storage.sync.get(['urls'], function(result) {
         if (alarmTime > now) {
             
             // Delay computed in minutes
-            const delay = (alarmTime - now)/(1000 * 60);
+            const delayInMinutes = (alarmTime - now)/(1000 * 60);
 
-            chrome.alarms.create(url, {delay});
+            chrome.alarms.create(url, {delayInMinutes});
         }
     })
 })
