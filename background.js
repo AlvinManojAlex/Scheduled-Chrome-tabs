@@ -16,6 +16,10 @@ chrome.storage.sync.get(['urls'], function(result) {
   
       // Set new alarms
       urls.forEach(({ url, time }) => {
+        if (!/^https:\/\//i.test(url)) {
+            url = 'http://' + url;
+        }
+
         const [hours, minutes] = time.split(':');
 
         const now = new Date();
@@ -30,7 +34,7 @@ chrome.storage.sync.get(['urls'], function(result) {
         } else {
           console.log(`Scheduled time ${alarmTime} has already passed for ${url}`);
         }
-        
+
       });
     });
   }
