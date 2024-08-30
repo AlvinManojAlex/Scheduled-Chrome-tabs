@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "Scheduled Chrome Tab Opener",
+    "name": "Scheduled Chrome Tabs",
     "version": "1.0",
     "permissions": ["storage", "alarms", "tabs"],
     "background": {
